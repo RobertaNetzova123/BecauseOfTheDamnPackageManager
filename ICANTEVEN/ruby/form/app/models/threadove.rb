@@ -1,0 +1,2 @@
+class Threadove < ApplicationRecord
+end

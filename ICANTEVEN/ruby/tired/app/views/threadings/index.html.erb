@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Threadings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @threadings.each do |threading| %>
+      <tr>
+        <td><%= threading.id %></td>
+        <td><%= threading.value %></td>
+        <td><%= link_to 'Show', threading %></td>
+        <td><%= link_to 'Edit', edit_threading_path(threading) %></td>
+        <td><%= link_to 'Destroy', threading, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Threading', new_threading_path %>

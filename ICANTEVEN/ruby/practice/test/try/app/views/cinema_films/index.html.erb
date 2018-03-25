@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cinema Films</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cinema_films.each do |cinema_film| %>
+      <tr>
+        <td><%= link_to 'Show', cinema_film %></td>
+        <td><%= link_to 'Edit', edit_cinema_film_path(cinema_film) %></td>
+        <td><%= link_to 'Destroy', cinema_film, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cinema Film', new_cinema_film_path %>

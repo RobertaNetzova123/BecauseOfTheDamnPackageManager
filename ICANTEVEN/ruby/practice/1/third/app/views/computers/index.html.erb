@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Computers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Color</th>
+      <th>Brand</th>
+      <th>Processor</th>
+      <th>Room number</th>
+      <th>Room size</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @computers.each do |computer| %>
+      <tr>
+        <td><%= computer.color %></td>
+        <td><%= computer.brand %></td>
+        <td><%= computer.processor %></td>
+        <td><%= computer.room.room_number %></td>
+	<td><%= computer.room.room_size %></td>
+        <td><%= link_to 'Show', computer %></td>
+        <td><%= link_to 'Edit', edit_computer_path(computer) %></td>
+        <td><%= link_to 'Destroy', computer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Computer', new_computer_path %>

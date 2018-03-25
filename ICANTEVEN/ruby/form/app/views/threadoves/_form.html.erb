@@ -1,0 +1,27 @@
+<%= form_with(model: threadofe, local: true) do |form| %>
+  <% if threadofe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(threadofe.errors.count, "error") %> prohibited this threadofe from being saved:</h2>
+
+      <ul>
+      <% threadofe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id %>
+    <%= form.number_field :id, id: :threadofe_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :value %>
+    <%= form.number_field :value, id: :threadofe_value %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

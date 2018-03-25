@@ -1,0 +1,4 @@
+
+** (process:6730): WARNING **: /build/indicator-session-u5LUS9/indicator-session-12.10.5+16.04.20160412/src/backend-dbus/utils.c:50 on_proxy_ready_impl: Could not connect: Connection refused
+
+** (process:6730): WARNING **: 

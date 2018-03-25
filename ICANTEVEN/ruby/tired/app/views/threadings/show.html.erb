@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @threading.id %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @threading.value %>
+</p>
+
+<%= link_to 'Edit', edit_threading_path(@threading) %> |
+<%= link_to 'Back', threadings_path %>

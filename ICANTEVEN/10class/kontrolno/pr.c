@@ -1,0 +1,34 @@
+#include <stdio.h>
+int main ()
+{
+float b[50],c;
+                                int sorted,j,i,n,k;
+                                sorted=0;
+                                printf("\n Input n:");
+                                scanf("%d",&n);
+                                i=0;
+                                for(k=0;k<n;k++)
+                                {
+                                        printf("\n Input number %d:",k+1);
+                                        scanf("%f",&b[k]);
+                                }
+                                i=0;
+                                for(i=1;1<n;i++)
+                                {
+                                        sorted=1;
+                                        for(j=0;j<n-i;j++)
+                                        {
+                                                if(b[j]<b[j+1])
+                                                {
+                                                        c=b[j];
+                                                        b[j]=b[j+1];
+                                                        b[j+1]=c;
+                                                        sorted=0;
+                                                }
+					}
+                                        if(sorted) break;
+                                }
+                                for (k=0;k<n;k++)
+                                printf("%.2f \n",b[k]);
+				return 0;
+}

@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Films</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Film Name</th>
+      <th>Cinema Location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @films.each do |film| %>
+     <% film.cinemas.each do |cinema| %>
+      <tr>
+        <td><%= film.name %></td>
+        <td><%= cinema.location %></td>
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Film', new_film_path %>  

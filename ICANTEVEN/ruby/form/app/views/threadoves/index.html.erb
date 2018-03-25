@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Threadoves</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @threadoves.each do |threadofe| %>
+      <tr>
+        <td><%= threadofe.id %></td>
+        <td><%= threadofe.value %></td>
+        <td><%= link_to 'Show', threadofe %></td>
+        <td><%= link_to 'Edit', edit_threadofe_path(threadofe) %></td>
+        <td><%= link_to 'Destroy', threadofe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Threadofe', new_threadofe_path %>
